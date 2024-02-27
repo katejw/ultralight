@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Cards CSS</title>
+    <meta charset="utf-8" />
+    <style>
+      img {
+        max-width: 100%;
+      }
+      html,
+      body {
+        height: 100vh;
+      }
+      body {
+        margin: 0;
+        font-size: 2.5em;
+        letter-spacing: 0.08em;
+      }
+      section {
+        height: 100vh;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      .card {
+        font-family: "Georgia";
+        width: 450px;
+        height: 300px;
+        background: white;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .name {
+        z-index: 1;
+      }
+      .logo {
+        width: 100px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 0;
+        mix-blend-mode: multiply;
+      }
+      .title {
+        font-size: 11px;
+        text-align: right;
+        position: absolute;
+        bottom: 12px;
+        right: 20px;
+        letter-spacing: 0.05em;
+        z-index: 3;
+      }
+      .line {
+        background: rgb(251, 130, 191);
+        height: 100%;
+        width: 5px;
+        position: absolute;
+        left: 65px;
+        z-index: 1;
+      }
+      .horline {
+        background: cadetblue;
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        bottom: 65px;
+      }
+
+
+      #c2 {
+        background: blanchedalmond;
+      }
+      #c2 .card{
+        font-family: Avantgarde;
+        width: 450px;
+        height: 300px;
+        background: white;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      #c2 .img{
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        mix-blend-mode: multiply;
+        opacity: 60%;
+      }
+      #c2 .name{
+        position: absolute;
+        top: 110px;
+        z-index: 3;
+
+      }
+      #c2 .horline{
+        background: peachpuff;
+        width: 80%;
+        height: 170px;
+        top: 70px;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+      }
+      #c2 .detail {
+        position: absolute;
+        top: 80px;
+        font-size: 10px;
+        z-index: 3;
+      }
+
+
+      #c3 {
+        background: whitesmoke;
+      }
+      #c3 .card{
+        font-family: "American Typewriter";
+        width: 450px;
+        height: 300px;
+        background: white;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      #c3 .img{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+        mix-blend-mode: multiply;
+      }
+      #c3 .horline {
+        background: pink;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        z-index: 2;
+        display: flex;
+      }
+      #c3 .horline2 {
+        background: pink;
+        display: flex;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        z-index: 2;
+      }
+      #c3 .detail {
+        font-size: 10px;
+        text-align: center;
+        position: absolute;
+        bottom: 25px;
+        z-index: 3;
+      }
+      #c3 .contact {
+        font-size: 10px;
+        text-align: center;
+        position: absolute;
+        top: 25px;
+        z-index: 3;
+      }
+      #c3 .name {
+        z-index: 1;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="c1">
+      <div class="card">
+        <div class="name">KATE PARK</div>
+        <div class="logo">
+          <img src="ultralightlogo.png" />
+        </div>
+        <div class="title">
+          <i>Princeton University</i><br />
+          Class of 2026<br />
+          Computer Science, B.S.E.
+        </div>
+        <div class="line"></div>
+        <div class="horline"></div>
+      </div>
+    </section>
+  </body>
+
+  <body>
+    <section id="c2">
+      <div class="card">
+        <div class="name"><b>KATE <br /> 
+          PARK</div></b>
+        <div class="detail">
+          <i>Princeton University</i>, Class of 2026
+        </div>
+        <div class="horline"></div>
+        <div class="img">
+          <img src="orange.jpeg" />
+      </div>
+    </section>
+  </body>
+
+  <body>
+    <section id="c3">
+      <div class="card">
+        <div class="name">KATE PARK</div>
+        <div class="img">
+            <img src="strawberry.jpeg" />
+        </div>
+        <div class="detail">
+          <i>Princeton University</i>,
+          Class of 2026<br />
+        </div>
+        <div class="contact">katepark@princeton.edu</div>
+        <div class="horline"></div>
+        <div class="horline2"></div>
+      </div>
+    </section>
+  </body>
+</html>
+
+</html>
