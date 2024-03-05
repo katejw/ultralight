@@ -1,1 +1,86 @@
+body {
+  background-color: lavenderblush;
+  margin: 2em;
+  font-family: "poppins", "Century Gothic", "American Typewriter";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 24px;
+}
 
+.nav-container {
+  text-align: center;
+}
+
+nav {
+  padding: 0.5em;
+  border: 1px solid black;
+  border-radius: 50px;
+  font-size: 1.5em;
+  font-family: "American Typewriter";
+  margin-bottom: 1em;
+  left: 1em;
+  right: 1em;
+  top: 1em;
+  background: whitesmoke;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0.25em;
+  text-decoration: none;
+  color: black;
+}
+
+a.current {
+  font-weight: bold;
+  color: hotpink;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 33%;
+}
+
+.middle {
+  width: 33%;
+}
+
+.right {
+  width: 33%;
+}
+
+.pic {
+  width: 40%;
+}
+
+.des {
+  width: 60%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img {
+  width: 300px;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
