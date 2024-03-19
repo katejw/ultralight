@@ -1,1 +1,76 @@
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+img {
+  width: 400px;
+  height: auto;
+}
+
+main {
+  max-width: 600px;
+  margin: 2em;
+  transition: color 300ms ease;
+}
+
+.container {
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(454deg, darkseagreen, burlywood);
+}
+
+.slide1 h1 {
+  font-size: 70px;
+  margin-top: 50px;
+}
+
+.slide1 img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slide1 {
+  font-family: "Abril Fatface";
+}
+
+.slide2,
+.slide3,
+.slide4 {
+  transition: color 300ms ease-in;
+}
+.slide6,
+.slide7 {
+  font-family: "Abril Fatface";
+  transition: color 300ms ease-in;
+}
+
+.slide7 {
+  color: transparent;
+}
+
+@media screen and (max-width: 700px) {
+  .slide6,
+  .slide2 {
+    color: transparent;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .slide7 {
+    color: black;
+  }
+  .slide2 {
+    color: transparent;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .slide4 {
+    color: transparent;
+  }
+}
