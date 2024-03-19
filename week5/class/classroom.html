@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Classroom</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <style>
+      main {
+        max-width: 600px;
+        margin: 2em;
+        transition: color 300ms ease;
+        font-family: monospace;
+        font-size: 20px;
+        color: navy;
+      }
+      .beginning,
+      .middle,
+      .end {
+        color: navy;
+        transition: color 300ms ease-in;
+      }
 
+      @media screen and (max-width: 720px) {
+        .middle {
+          color: white;
+        }
+      }
+      @media screen and (max-width: 720px) {
+        .end {
+          color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <b><p>Describe the room you're sitting with</p></b>
+      <p>
+        The room is very open, the windows are across two walls, spanning most
+        of the wall.
+        <span class="middle">
+          I can feel the breeze, and there is an abundance of light coming
+          inside. I can hear the cars passing by. Outside are mostly houses and
+          stores, giving the sense that I am almost off campus. The table and
+          the chairs are in the middle of the room, around a large table,
+          fueling the sense of openness that penetrates throughout.
+        </span>
+        It is easy to think of this room being a space for art from the pile of
+        coins on the table to the white paper taped onto the desk, and various
+        projects in progress behind. The variation of the chairs from its shape
+        to its height adds to the sense of
+        <span class="end">
+          freedom evoked by the room. The abundance of white colors in the room
+          adds to this. Cohesively, this sense of freedom and openness come
+          together
+        </span>
+        to give conviction that the space is meant for creativity and creation.
+      </p>
+    </main>
+  </body>
+</html>
