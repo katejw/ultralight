@@ -1,1 +1,112 @@
+<!DOCTYPE html>
 
+<html>
+  <head>
+    <title>flying a kite!!</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background-color: lavenderblush;
+        font-family: "American Typewriter";
+        color: navy;
+      }
+      .title {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 2em;
+      }
+      video {
+        max-height: 70vh;
+      }
+      .column {
+        float: left;
+        font-style: italic;
+      }
+
+      .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+      }
+
+      .middle {
+        width: 10%;
+      }
+
+      .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .descp {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+
+      .endlink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="title">
+      <h1>flying a kite!!</h1>
+    </div>
+    <div class="row">
+      <div class="column left">
+        <h3>cannon green</h3>
+      </div>
+      <div class="column middle"><p></p></div>
+      <div class="column right">
+        <h3>witherspoon courtyard</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column left">
+        <video src="kite1.mov" controls></video>
+      </div>
+      <div class="column middle"><p></p></div>
+      <div class="column right">
+        <video src="kite2.mov" controls></video>
+      </div>
+    </div>
+    <div class="row">
+      <div class="descp">
+        <div class="column left">
+          <p>
+            I flied the kite right in the green area front of Nassau Hall. The
+            weather was gorgeous. I noticed the importance in the direction of
+            the kite in relation to the wind.
+          </p>
+        </div>
+        <div class="column middle"><p></p></div>
+        <div class="column right">
+          <p>
+            Next, I moved to the courtyard by my dorm. I liked playing around
+            with how much to let go based on how the wind feels.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="endlink">
+      <p>go back to <a href="../index.html">home!</a></p>
+    </div>
+  </body>
+</html>
