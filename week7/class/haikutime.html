@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>In Situ Haiku</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+    <style>
+        #c1, #c2, #c3, #c4 {
+            opacity:0;
+        }
+        body[data-status="morning"] #c4 {
+            opacity: 1;
+        }
+        body[data-status="afternoon"] #c2 {
+            opacity: 1;
+        }
+        body[data-status="evening"] #c1 {
+            opacity: 1;
+        }
+        body[data-status="night"] #c3 {
+            opacity: 1;
+        }
+    </style>
+  </head>
+
+  <body>
+    <section id="c1">
+      <div class="haiku">
+        <p>faint shouts of support,</p>
+        <p>boom of bass in rehearsal,</p>
+        <p>constant creation</p>
+      </div>
+    </section>
+
+    <section id="c2">
+      <div class="haiku">
+        <p>creative spirits</p>
+        <p>converge, mingle together</p>
+        <p>beyond boundaries</p>
+      </div>
+    </section>
+
+    <section id="c3">
+      <div class="haiku">
+        <p>chair, couch, bench, table</p>
+        <p>options to optimize work</p>
+        <p>study, play, dance, chat</p>
+      </div>
+    </section>
+
+    <section id="c4">
+      <div class="haiku">
+        <p>abundance of space</p>
+        <p>and pure light, yet lets me hide</p>
+        <p>if I desire</p>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+</html>
