@@ -1,1 +1,81 @@
+<!DOCTYPE html>
 
+<html>
+  <head>
+    <title>first idea</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        align-items: center;
+        background-color: darkslateblue;
+        color: beige;
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      .time {
+        font-size: 2.5em;
+      }
+
+      .date {
+        bottom: 5px;
+        font-size: 2em;
+        margin-top: 300px;
+      }
+
+      /* referenced from https://css-tricks.com/snippets/css/typewriter-effect/ */
+      .message {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0.15em; /* Adjust as needed */
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+
+        font-family: "Courier New", Courier, monospace;
+        margin-top: 300px;
+        font-size: 1em;
+      }
+
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: beige;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="time">
+      <p>11:03 am</p>
+    </div>
+
+    <div class="message">
+      <p>
+        Shuffle your most recent playlist, close your eyes, and move your bodyas
+        you feel the rhythm.
+      </p>
+    </div>
+
+    <div class="date">
+      <p>APR 2, 2023</p>
+    </div>
+  </body>
+</html>
