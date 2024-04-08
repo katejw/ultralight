@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Draft ONE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      #art,
+      #music,
+      #theater,
+      #dance {
+        opacity: 0;
+      }
+      body[data-status="morning"] #art {
+        opacity: 1;
+      }
+      body[data-status="afternoon"] #music {
+        opacity: 1;
+      }
+      body[data-status="evening"] #theater {
+        opacity: 1;
+      }
+      body[data-status="night"] #dance {
+        opacity: 1;
+      }
+
+      .art body {
+        align-items: center;
+        background-color: antiquewhite;
+        color: firebrick;
+        text-align: center;
+        font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+      }
+
+      .music body {
+        align-items: center;
+        background-color: darkgrey;
+        color: darkblue;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .dance body {
+        align-items: center;
+        background-color: dodgerblue;
+        color: ghostwhite;
+        text-align: center;
+        font-family: "Quicksand", sans-serif;
+      }
+
+      .theater body {
+        align-items: center;
+        background-color: moccasin;
+        color: magenta;
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      .time {
+        font-size: 2.5em;
+      }
+
+      .date {
+        bottom: 5px;
+        font-size: 2em;
+        margin-top: 300px;
+      }
+
+      /* referenced from https://css-tricks.com/snippets/css/typewriter-effect/ */
+      .message {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0.15em; /* Adjust as needed */
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+
+        font-family: "Courier New", Courier, monospace;
+        margin-top: 300px;
+        font-size: 1em;
+      }
+
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: beige;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="art">
+      <div class="time">
+        <span id="timeupdate"></span>
+      </div>
+
+      <div class="message">
+        <p>Sketch what you see in front of you in your notebook.</p>
+      </div>
+
+      <div class="date">
+        <span id="dateupdate"></span>
+      </div>
+    </section>
+
+    <section id="music">
+      <div class="time">
+        <span id="timeupdate"></span>
+      </div>
+
+      <div class="message">
+        <p>
+          Open your music app, play any piece in the classical genre, and Google
+          a fun fact about the composer.
+        </p>
+      </div>
+
+      <div class="date">
+        <span id="dateupdate"></span>
+      </div>
+    </section>
+
+    <section id="theater">
+      <div class="time">
+        <span id="timeupdate"></span>
+      </div>
+
+      <div class="message">
+        <p>
+          Write a monologue that speaks about what's on your mind right now in a
+          theatrical attitude.
+        </p>
+      </div>
+
+      <div class="date">
+        <span id="dateupdate"></span>
+      </div>
+    </section>
+
+    <section id="dance">
+      <div class="time">
+        <span id="timeupdate"></span>
+      </div>
+
+      <div class="message">
+        <p>
+          Shuffle your most recent playlist, close your eyes, and move your body
+          as you feel the rhythm.
+        </p>
+      </div>
+
+      <div class="date">
+        <span id="dateupdate"></span>
+      </div>
+    </section>
+  </body>
+</html>
