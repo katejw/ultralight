@@ -1,1 +1,224 @@
+<!DOCTYPE html>
 
+<html>
+  <head>
+    <title>Draft ONE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      #art,
+      #music,
+      #theater,
+      #dance {
+        display: none;
+      }
+      body[data-status="morning"] #art {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: antiquewhite;
+        color: firebrick;
+        text-align: center;
+        font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+      }
+      body[data-status="afternoon"] #music {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: darkgrey;
+        color: darkblue;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+      }
+      body[data-status="evening"] #theater {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: moccasin;
+        color: magenta;
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      body[data-status="night"] #dance {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: dodgerblue;
+        color: ghostwhite;
+        text-align: center;
+        font-family: "Quicksand", sans-serif;
+      }
+
+      .time {
+        font-size: 8vh;
+        display: absolute;
+        align-items: center;
+      }
+      .date {
+        position: absolute; /* Position absolutely within the section */
+        bottom: 10px; /* Adjust as needed for desired spacing from the bottom */
+        left: 50%; /* Position horizontally centered */
+        transform: translateX(-50%); /* Adjust for horizontal centering */
+        font-size: 8vh;
+      }
+
+      @keyframes grow {
+        0% {
+          max-height: var(--lineHeight);
+        }
+        100% {
+          max-height: calc(var(--lineHeight) * var(--lines));
+        }
+      }
+
+      @keyframes carriageReturn {
+        0% {
+          top: 0;
+        }
+        100% {
+          top: calc(var(--lineHeight) * var(--lines));
+        }
+      }
+
+      @keyframes type {
+        0% {
+          width: 100%;
+        }
+        100% {
+          width: 0%;
+        }
+      }
+
+      @keyframes caret {
+        0% {
+          color: var(--bgColor);
+        }
+        100% {
+          color: black;
+        }
+      }
+
+      .message {
+        justify-content: center;
+        align-items: center;
+        font-size: 4vh;
+        --bgColor: dodgerblue;
+        --lines: 10;
+        --lineHeight: 5.15vh;
+        --timePerLine: 4s;
+        --widthCh: 22;
+        --width: calc(var(--widthCh) * 1ch);
+        /* do not touch the time property!!! */
+        --time: calc(var(--lines) * var(--timePerLine));
+        animation: grow var(--time) steps(var(--lines));
+        animation-fill-mode: forwards;
+        background: var(--bgColor);
+        line-height: var(--lineHeight);
+        max-height: var(--lineHeight);
+        overflow: hidden;
+        position: relative;
+        /* word-break: break-all; */
+      }
+      .message::before {
+        justify-content: center;
+        align-items: center;
+        content: "";
+        animation: type var(--timePerLine) linear infinite,
+          carriageReturn var(--time) steps(var(--lines)) var(--lines),
+          caret var(--time) steps(2) forwards; /* Change the infinite to forwards */
+        animation-fill-mode: forwards; /* Stop animation when it reaches the end */
+        background: var(--bgColor);
+        border-left: 2px solid;
+        bottom: 0;
+        height: 2rem;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        border-left-width: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="art">
+      <div class="time">
+        <span id="timeupdate-a"></span>
+      </div>
+
+      <div class="message">
+        <p>Sketch what you see in front of you in your notebook.</p>
+      </div>
+
+      <div class="date">
+        <span id="dateupdate-a"></span>
+      </div>
+    </section>
+
+    <section id="music">
+      <div class="time">
+        <span id="timeupdate-m"></span>
+      </div>
+
+      <div class="message">
+        <p></p>
+      </div>
+
+      <div class="date">
+        <span id="dateupdate-m"></span>
+      </div>
+    </section>
+
+    <section id="theater">
+      <div class="time">
+        <span id="timeupdate-t"></span>
+      </div>
+
+      <div class="message">
+        <p>
+          Write a monologue that speaks about what's on your mind right now in a
+          theatrical attitude.
+        </p>
+      </div>
+
+      <div class="date">
+        <span id="dateupdate-t"></span>
+      </div>
+    </section>
+
+    <section id="dance">
+      <div class="time">
+        <span id="timeupdate-d"></span>
+      </div>
+
+      <div class="message">
+        <p>
+          Shuffle your most recent playlist, close your eyes, and move your body
+          as you feel the rhythm.
+        </p>
+      </div>
+
+      <div class="date">
+        <span id="dateupdate-d"></span>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
