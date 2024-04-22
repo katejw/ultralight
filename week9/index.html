@@ -30,6 +30,7 @@
         color: firebrick;
         text-align: center;
         font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+        --bgColor: antiquewhite;
       }
       body[data-status="afternoon"] #music {
         display: grid;
@@ -41,6 +42,7 @@
         color: darkblue;
         text-align: center;
         font-family: "Times New Roman", Times, serif;
+        --bgColor: darkgrey;
       }
       body[data-status="evening"] #theater {
         display: grid;
@@ -53,6 +55,8 @@
         text-align: center;
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
           "Lucida Sans", Arial, sans-serif;
+
+        --bgColor: moccasin;
       }
       body[data-status="night"] #dance {
         display: grid;
@@ -64,6 +68,7 @@
         color: ghostwhite;
         text-align: center;
         font-family: "Quicksand", sans-serif;
+        --bgColor: dodgerblue;
       }
 
       .time {
@@ -106,23 +111,13 @@
         }
       }
 
-      @keyframes caret {
-        0% {
-          color: var(--bgColor);
-        }
-        100% {
-          color: black;
-        }
-      }
-
       .message {
         justify-content: center;
         align-items: center;
         font-size: 4vh;
-        --bgColor: dodgerblue;
-        --lines: 10;
-        --lineHeight: 5.15vh;
-        --timePerLine: 4s;
+        --lines: 5;
+        --lineHeight: 5vh;
+        --timePerLine: 3s;
         --widthCh: 22;
         --width: calc(var(--widthCh) * 1ch);
         /* do not touch the time property!!! */
@@ -141,8 +136,9 @@
         align-items: center;
         content: "";
         animation: type var(--timePerLine) linear infinite,
-          carriageReturn var(--time) steps(var(--lines)) var(--lines),
-          caret var(--time) steps(2) forwards; /* Change the infinite to forwards */
+          /* Keep the typing animation infinite */ carriageReturn var(--time)
+            steps(var(--lines)) var(--time),
+          caret var(--time) steps(2) forwards; /* Keep the caret animation forwards */
         animation-fill-mode: forwards; /* Stop animation when it reaches the end */
         background: var(--bgColor);
         border-left: 2px solid;
@@ -177,7 +173,10 @@
       </div>
 
       <div class="message">
-        <p></p>
+        <p>
+          Open a music app, play any piece in the classical genre, and Google a
+          fun fact about the composer while you listen.
+        </p>
       </div>
 
       <div class="date">
@@ -192,8 +191,8 @@
 
       <div class="message">
         <p>
-          Write a monologue that speaks about what's on your mind right now in a
-          theatrical attitude.
+          Write a monologue that incorporates the first three objects that come
+          to mind.
         </p>
       </div>
 
