@@ -1,9 +1,13 @@
+/* Pieces of code taken from various references listed before each section! */
+
 #art,
 #music,
 #theater,
 #dance {
   display: none;
 }
+
+/* ART SECTION */
 body[data-status="morning"] #art {
   display: grid;
   margin: 0;
@@ -15,145 +19,8 @@ body[data-status="morning"] #art {
   text-align: center;
   font-family: "Lucida Handwriting", "Brush Script MT", cursive;
 }
-body[data-status="afternoon"] #music {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  color: darkblue;
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-
-  background-image: url(prettycloud.jpg);
-  background-size: cover;
-  -webkit-animation: slidein 100s;
-  animation: slidein 100s;
-
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-body[data-status="evening"] #theater {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: moccasin;
-  color: magenta;
-  text-align: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-
-  --bgColor: moccasin;
-
-  background: linear-gradient(-45deg, teal, steelblue, rosybrown, midnightblue);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  z-index: -1;
-}
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-body[data-status="night"] #dance {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-
-  background-color: darkslateblue;
-  color: ghostwhite;
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-}
-
-@-webkit-keyframes slidein {
-  from {
-    background-position: top;
-    background-size: 3000px;
-  }
-  to {
-    background-position: -100px 0px;
-    background-size: 2750px;
-  }
-}
-
-@keyframes slidein {
-  from {
-    background-position: top;
-    background-size: 3000px;
-  }
-  to {
-    background-position: -100px 0px;
-    background-size: 2750px;
-  }
-}
-
-.messagea {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 30%;
-  transform: translateX(-50%);
-  font-size: 4vw;
-
-  background-image: linear-gradient(
-    -225deg,
-    ghostwhite 0%,
-    darksalmon 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 10s linear infinite;
-  display: inline-block;
-}
-
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-.time {
-  position: absolute;
-  left: 50%; /* Position horizontally centered */
-  transform: translateX(-50%);
-  font-size: 8vh;
-  z-index: 1500;
-}
-.date {
-  position: absolute; /* Position absolutely within the section */
-  bottom: 10px; /* Adjust as needed for desired spacing from the bottom */
-  left: 50%; /* Position horizontally centered */
-  transform: translateX(-50%); /* Adjust for horizontal centering */
-  font-size: 8vh;
-  z-index: 1400;
-}
-
+/* code for text in art 
+https://verpex.com/blog/website-tips/a-text-reveal-animation-using-css */
 .reveal {
   color: #0000;
   font-size: 4vw;
@@ -176,7 +43,8 @@ body[data-status="night"] #dance {
     background-position: -200% 0, 0 0;
   }
 }
-
+/* code for art background 
+https://alvarotrigo.com/blog/animated-backgrounds-css/ */
 #air {
   position: relative;
   width: 100%;
@@ -238,15 +106,185 @@ body[data-status="night"] #dance {
   }
 }
 
-.message {
+/* MUSIC SECTION */
+body[data-status="afternoon"] #music {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  color: darkblue;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+
+  background-image: url(prettycloud.jpg);
+  background-size: cover;
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+/* code for font in music
+https://alvarotrigo.com/blog/css-text-animations/ */
+.messagem {
+  vertical-align: middle;
+  text-align: center;
+  background: linear-gradient(110deg, darkblue 33%, rgba(0, 0, 0, 0) 33%),
+    linear-gradient(110deg, lightblue 34%, moccasin 34%);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 30%;
   transform: translateX(-50%);
   font-size: 4vw;
+  animation: Gradient 5s ease infinite;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+}
+@keyframes Gradient {
+  0% {
+    background-position: 30% 50%;
+  }
+  50% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 30% 50%;
+  }
+}
+/* code for background in music 
+https://alvarotrigo.com/blog/animated-backgrounds-css/ */
+@-webkit-keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+@keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
 }
 
+/* THEATER SECTION */
+body[data-status="evening"] #theater {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: moccasin;
+  color: magenta;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: linear-gradient(-45deg, teal, steelblue, rosybrown, midnightblue);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  z-index: -1;
+}
+/* code for background in theater
+https://alvarotrigo.com/blog/animated-backgrounds-css/ */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* code for font in theater 
+https://www.w3schools.com/howto/howto_css_glowing_text.asp */
+.glow {
+  font-size: 4vw;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* DANCE SECTION */
+body[data-status="night"] #dance {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+
+  background-color: darkslateblue;
+  color: ghostwhite;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+/* message in dance 
+https://alvarotrigo.com/blog/css-text-animations/ */
+.messagea {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  transform: translateX(-50%);
+  font-size: 4vw;
+
+  background-image: linear-gradient(
+    -225deg,
+    ghostwhite 0%,
+    darksalmon 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 10s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+/* code for dance background 
+https://alvarotrigo.com/blog/animated-backgrounds-css/ */
 .cube {
   position: absolute;
   top: 80vh;
@@ -315,79 +353,26 @@ body[data-status="night"] #dance {
   }
 }
 
-.glow {
-  font-size: 4vw;
-  color: #fff;
-  text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+.time {
+  position: absolute;
+  left: 50%; /* Position horizontally centered */
+  transform: translateX(-50%);
+  font-size: 8vh;
+  z-index: 1500;
 }
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
+.date {
+  position: absolute; /* Position absolutely within the section */
+  bottom: 10px; /* Adjust as needed for desired spacing from the bottom */
+  left: 50%; /* Position horizontally centered */
+  transform: translateX(-50%); /* Adjust for horizontal centering */
+  font-size: 8vh;
+  z-index: 1400;
 }
-
-@keyframes grow {
-  0% {
-    max-height: var(--lineHeight);
-  }
-  100% {
-    max-height: calc(var(--lineHeight) * var(--lines));
-  }
-}
-
-@keyframes carriageReturn {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: calc(var(--lineHeight) * var(--lines));
-  }
-}
-
-@keyframes type {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0%;
-  }
-}
-.messagem {
-  vertical-align: middle;
-  text-align: center;
-  background: linear-gradient(110deg, darkblue 33%, rgba(0, 0, 0, 0) 33%),
-    linear-gradient(110deg, lightblue 34%, moccasin 34%);
-  background-size: 400%;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.message {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 30%;
   transform: translateX(-50%);
   font-size: 4vw;
-  animation: Gradient 5s ease infinite;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 5s ease infinite;
-}
-
-@keyframes Gradient {
-  0% {
-    background-position: 30% 50%;
-  }
-  50% {
-    background-position: 25% 50%;
-  }
-  100% {
-    background-position: 30% 50%;
-  }
 }
