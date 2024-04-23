@@ -374,7 +374,7 @@ body[data-status="night"] #dance {
   transform: translateX(-50%);
   top: 30%;
   transform: translateX(-50%);
-  font-size: 6vh;
+  font-size: 3em;
   animation: Gradient 5s ease infinite;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 5s ease infinite;
