@@ -21,7 +21,6 @@ body[data-status="afternoon"] #music {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background-color: darkgrey;
   color: darkblue;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
@@ -54,13 +53,7 @@ body[data-status="evening"] #theater {
 
   --bgColor: moccasin;
 
-  background: linear-gradient(
-    -45deg,
-    moccasin,
-    navajowhite,
-    oldlace,
-    mistyrose
-  );
+  background: linear-gradient(-45deg, teal, steelblue, rosybrown, midnightblue);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   z-index: -1;
@@ -84,11 +77,10 @@ body[data-status="night"] #dance {
   width: 100%;
   height: 100vh;
 
-  background-color: dodgerblue;
+  background-color: darkslateblue;
   color: ghostwhite;
   text-align: center;
   font-family: "Quicksand", sans-serif;
-  --bgColor: dodgerblue;
 }
 
 @-webkit-keyframes slidein {
@@ -117,14 +109,14 @@ body[data-status="night"] #dance {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 40%;
+  top: 30%;
   transform: translateX(-50%);
-  font-size: 7vh;
+  font-size: 6vh;
 
   background-image: linear-gradient(
     -225deg,
-    #231557 0%,
-    #44107a 29%,
+    ghostwhite 0%,
+    darksalmon 29%,
     #ff1361 67%,
     #fff800 100%
   );
@@ -138,7 +130,6 @@ body[data-status="night"] #dance {
   -webkit-text-fill-color: transparent;
   animation: textclip 10s linear infinite;
   display: inline-block;
-  font-size: 4vh;
 }
 
 @keyframes textclip {
@@ -251,7 +242,7 @@ body[data-status="night"] #dance {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 40%;
+  top: 30%;
   transform: translateX(-50%);
   font-size: 6vh;
 }
@@ -262,14 +253,14 @@ body[data-status="night"] #dance {
   left: 45vw;
   width: 10px;
   height: 10px;
-  border: solid 1px #003298;
+  border: solid 1px #ff1361;
   transform-origin: top left;
   transform: scale(0) rotate(0deg) translate(-50%, -50%);
   -webkit-animation: cube 12s ease-in forwards infinite;
   animation: cube 12s ease-in forwards infinite;
 }
 .cube:nth-child(2n) {
-  border-color: #0051f4;
+  border-color: ghostwhite;
 }
 .cube:nth-child(2) {
   -webkit-animation-delay: 2s;
@@ -341,5 +332,62 @@ body[data-status="night"] #dance {
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
       0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+@keyframes grow {
+  0% {
+    max-height: var(--lineHeight);
+  }
+  100% {
+    max-height: calc(var(--lineHeight) * var(--lines));
+  }
+}
+
+@keyframes carriageReturn {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: calc(var(--lineHeight) * var(--lines));
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+.messagem {
+  vertical-align: middle;
+  text-align: center;
+  background: linear-gradient(110deg, darkblue 33%, rgba(0, 0, 0, 0) 33%),
+    linear-gradient(110deg, lightblue 34%, moccasin 34%);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  transform: translateX(-50%);
+  font-size: 6vh;
+  animation: Gradient 5s ease infinite;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 30% 50%;
+  }
+  50% {
+    background-position: 25% 50%;
+  }
+  100% {
+    background-position: 30% 50%;
   }
 }
