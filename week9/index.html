@@ -12,156 +12,24 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      #art,
-      #music,
-      #theater,
-      #dance {
-        display: none;
-      }
-      body[data-status="morning"] #art {
-        display: grid;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: antiquewhite;
-        color: firebrick;
-        text-align: center;
-        font-family: "Lucida Handwriting", "Brush Script MT", cursive;
-        --bgColor: antiquewhite;
-        --lines: 3;
-        --lineHeight: 5vh;
-      }
-      body[data-status="afternoon"] #music {
-        display: grid;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: darkgrey;
-        color: darkblue;
-        text-align: center;
-        font-family: "Times New Roman", Times, serif;
-        --bgColor: darkgrey;
-      }
-      body[data-status="evening"] #theater {
-        display: grid;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: moccasin;
-        color: magenta;
-        text-align: center;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif;
-
-        --bgColor: moccasin;
-      }
-      body[data-status="night"] #dance {
-        display: grid;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: dodgerblue;
-        color: ghostwhite;
-        text-align: center;
-        font-family: "Quicksand", sans-serif;
-        --bgColor: dodgerblue;
-        --lineHeight: 5vh;
-      }
-
-      .time {
-        font-size: 8vh;
-        display: absolute;
-        align-items: center;
-      }
-      .date {
-        position: absolute; /* Position absolutely within the section */
-        bottom: 10px; /* Adjust as needed for desired spacing from the bottom */
-        left: 50%; /* Position horizontally centered */
-        transform: translateX(-50%); /* Adjust for horizontal centering */
-        font-size: 8vh;
-      }
-
-      @keyframes grow {
-        0% {
-          max-height: var(--lineHeight);
-        }
-        100% {
-          max-height: calc(var(--lineHeight) * var(--lines));
-        }
-      }
-
-      @keyframes carriageReturn {
-        0% {
-          top: 0;
-        }
-        100% {
-          top: calc(var(--lineHeight) * var(--lines));
-        }
-      }
-
-      @keyframes type {
-        0% {
-          width: 100%;
-        }
-        100% {
-          width: 0%;
-        }
-      }
-
-      .message {
-        justify-content: center;
-        align-items: center;
-        font-size: 4vh;
-        --lines: 5;
-        --timePerLine: 3s;
-        --widthCh: 22;
-        --width: calc(var(--widthCh) * 1ch);
-        /* do not touch the time property!!! */
-        --time: calc(var(--lines) * var(--timePerLine));
-        animation: grow var(--time) steps(var(--lines));
-        animation-fill-mode: forwards;
-        background: var(--bgColor);
-        line-height: var(--lineHeight);
-        max-height: var(--lineHeight);
-        overflow: hidden;
-        position: relative;
-        /* word-break: break-all; */
-      }
-      .message::before {
-        justify-content: center;
-        align-items: center;
-        content: "";
-        animation: type var(--timePerLine) linear infinite,
-          /* Keep the typing animation infinite */ carriageReturn var(--time)
-            steps(var(--lines)) var(--time),
-          caret var(--time) steps(2) forwards; /* Keep the caret animation forwards */
-        animation-fill-mode: forwards; /* Stop animation when it reaches the end */
-        background: var(--bgColor);
-        border-left: 2px solid;
-        bottom: 0;
-        height: 2rem;
-        position: absolute;
-        right: 0;
-        width: 100%;
-        border-left-width: 0;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <section id="art">
+      <section id = "air">
+        <div class="air air1"></div>
+        <div class="air air2"></div>
+        <div class="air air3"></div>
+        <div class="air air4"></div>
+      </section id = "air">
       <div class="time">
         <span id="timeupdate-a"></span>
       </div>
 
       <div class="message">
-        <p>Sketch what you see in front of you in your notebook.</p>
+        <p>
+          <span class="reveal">Sketch what you see in front of you in your notebook.</span></p>
       </div>
 
       <div class="date">
@@ -192,10 +60,12 @@
       </div>
 
       <div class="message">
+        <div class="glow">
         <p>
-          Write a monologue that incorporates the first three objects that come
-          to mind.
+            Write a monologue that incorporates the first three objects that
+            come to mind.
         </p>
+      </div>
       </div>
 
       <div class="date">
@@ -204,11 +74,19 @@
     </section>
 
     <section id="dance">
+
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+
       <div class="time">
         <span id="timeupdate-d"></span>
       </div>
 
-      <div class="message">
+      <div class="messagea">
         <p>
           Shuffle your most recent playlist, close your eyes, and move your body
           as you feel the rhythm.
