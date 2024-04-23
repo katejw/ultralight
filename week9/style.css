@@ -248,7 +248,7 @@ body[data-status="night"] #dance {
   background-color: darkslateblue;
   color: ghostwhite;
   text-align: center;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Verdana";
 }
 /* message in dance 
 https://alvarotrigo.com/blog/css-text-animations/ */
