@@ -7,6 +7,28 @@
   display: none;
 }
 
+#one,
+#two,
+#three {
+  display: none;
+}
+
+[data-status="one"] #one {
+  display: grid;
+}
+
+[data-status="two"] #two {
+  display: grid;
+}
+
+[data-status="three"] #three {
+  display: grid;
+}
+
+body {
+  margin: 0;
+}
+
 /* ART SECTION */
 body[data-status="morning"] #art {
   display: grid;

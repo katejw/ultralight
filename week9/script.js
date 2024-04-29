@@ -27,6 +27,14 @@ function updateDateTime() {
     document.getElementById("dateupdate-d").innerHTML = current_date;
   }
 
+  if (date.getDate % 3 == 0) {
+    status = "one";
+  } else if (date.getDate % 3 == 1) {
+    status = "two";
+  } else if (date.getDate % 3 == 2) {
+    status = "three";
+  }
+
   document.body.setAttribute("data-status", status);
 }
 
