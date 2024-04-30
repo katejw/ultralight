@@ -3,6 +3,7 @@ function updateDateTime() {
   var date = new Date();
   const hour = date.getHours();
   let status = "";
+  let stat = "";
 
   var current_time =
     date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
@@ -27,15 +28,16 @@ function updateDateTime() {
     document.getElementById("dateupdate-d").innerHTML = current_date;
   }
 
-  if (date.getDate % 3 == 0) {
-    status = "one";
-  } else if (date.getDate % 3 == 1) {
-    status = "two";
-  } else if (date.getDate % 3 == 2) {
-    status = "three";
+  if (date.getDate() % 3 == 0) {
+    stat = "one";
+  } else if (date.getDate() % 3 == 1) {
+    stat = "two";
+  } else if (date.getDate() % 3 == 2) {
+    stat = "three";
   }
 
   document.body.setAttribute("data-status", status);
+  document.body.setAttribute("day-status", stat);
 }
 
 updateDateTime();

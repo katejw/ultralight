@@ -13,15 +13,15 @@
   display: none;
 }
 
-[data-status="one"] #one {
+[day-status="one"] #one {
   display: grid;
 }
 
-[data-status="two"] #two {
+[day-status="two"] #two {
   display: grid;
 }
 
-[data-status="three"] #three {
+[day-status="three"] #three {
   display: grid;
 }
 
